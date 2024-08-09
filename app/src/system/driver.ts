@@ -1,7 +1,7 @@
 import { generateRandomNumber } from "@common"
 import { getOrigin as getWebOrigin} from "@web"
 import { getOrigin as getNodeOrigin} from "@node"
-import { logRandomNumber } from "../reader"
+import { logRandomNumber } from "reader/index.js"
 
 
 export function start(): void {  

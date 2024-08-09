@@ -4,11 +4,12 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
+    "prebuild": "npm run clean:build",
     "build": "tsc",
     "watch": "tsc -w",
-    "clean:build":"rimraf dist",
-    "predev": "npm run clean:build && npm rum build",
-    "dev": "node dist/app/index.js",
+    "clean:build": "rimraf dist",
+    "predev": "npm run clean:build && npm run build",
+    "dev": "node ../dist/app/src/index.js",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
