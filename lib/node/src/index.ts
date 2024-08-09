@@ -1,1 +1,1 @@
-export { getOrigin } from './system/origin'
+export { getOrigin } from './system/origin.js'
