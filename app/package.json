@@ -2,14 +2,15 @@
   "name": "app",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "prebuild": "npm run clean:build",
-    "build": "tsc",
-    "watch": "tsc -w",
     "clean:build": "rimraf dist",
-    "predev": "npm run clean:build && npm run build",
-    "dev": "node ../dist/app/src/index.js",
+    "prebuild": "npm run clean:build",
+    "build": "tsc --declaration && swc build src -d dist --strip-leading-paths --out-file-extension mjs",
+    "watch": "tsc -w",
+    "predev": "npm run build",
+    "dev": "node dist/index.js",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +21,8 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
+    "@swc/cli": "^0.4.0",
+    "@swc/core": "^1.7.9",
     "rimraf": "^6.0.1"
   }
 }

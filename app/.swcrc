@@ -1,0 +1,17 @@
+{
+  "$schema": "https://swc.rs/schema.json",
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "dynamicImport": true
+    },
+    "target": "es2020",
+    "paths": {
+      "@common":["../lib/common/dist/index.ts"], 
+      "@web":["../lib/web/dist/index.ts"],
+      "@node":["../lib/node/dist/index.ts"],
+      "../*":["app/build/*"]
+    },
+    "baseUrl": "."
+  }
+}
