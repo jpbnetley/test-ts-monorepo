@@ -7,6 +7,7 @@
   "scripts": {
     "clean:build": "rimraf dist",
     "prebuild": "npm run clean:build",
+    "check:types": "tsc --noEmit",
     "build:types":"tsc --declaration --emitDeclarationOnly",
     "build": "npm run build:types && swc build src -d dist --strip-leading-paths --out-file-extension mjs",
     "predev": "npm run clean:build",

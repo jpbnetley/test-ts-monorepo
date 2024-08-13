@@ -1,0 +1,31 @@
+name: Validate
+
+on:
+  workflow_dispatch:
+
+  pull_request:
+    branches: ['main']
+
+env:
+  node_version: 20
+
+jobs:
+  Tests:
+    name: Check Typescript
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        mono: [lib, app]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ env.node_version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.node_version }}
+        cache: 'npm'
+
+    - run: mpm ci
+    - run: npm -w {{ matrix.mono }} run check:types
