@@ -31,7 +31,7 @@ jobs:
       run: npm ci
 
     - name: Build lib
-      if: ${{matrix.mono}} !== lib
+      if: ${{matrix.mono}} != lib
       run: npm -w ${{ matrix.mono }} run build
 
     - name: Check types
