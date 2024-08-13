@@ -27,5 +27,5 @@ jobs:
         node-version: ${{ env.node_version }}
         cache: 'npm'
 
-    - run: mpm ci
+    - run: npm ci
     - run: npm -w {{ matrix.mono }} run check:types
