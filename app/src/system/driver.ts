@@ -1,8 +1,7 @@
-import { generateRandomNumber } from "@common"
-import { getOrigin as getWebOrigin} from "@web"
-import { getOrigin as getNodeOrigin} from "@node"
-import { logRandomNumber } from "reader/index.js"
-
+import { generateRandomNumber } from "@lib/common"
+import { getOrigin as getWebOrigin} from "@lib/web"
+import { getOrigin as getNodeOrigin} from "@lib/node"
+import { logRandomNumber } from "~/reader/index.js"
 
 export function start(): void {  
   console.log('start up')
