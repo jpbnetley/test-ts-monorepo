@@ -28,4 +28,4 @@ jobs:
         cache: 'npm'
 
     - run: npm ci
-    - run: npm -w {{ matrix.mono }} run check:types
+    - run: npm -w ${{ matrix.mono }} run check:types
