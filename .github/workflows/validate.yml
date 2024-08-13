@@ -32,7 +32,7 @@ jobs:
 
     - name: Build lib
       if: ${{matrix.mono}} != lib
-      run: npm -w ${{ matrix.mono }} run build
+      run: npm -w lib run build
 
     - name: Check types
       run: npm -w ${{ matrix.mono }} run check:types
