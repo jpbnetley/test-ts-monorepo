@@ -1,3 +1,3 @@
-import {start} from './system/driver'
+import {start} from './system/driver.js'
 
 start()

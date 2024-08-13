@@ -1,1 +1,1 @@
-export {generateRandomNumber} from './random-number'
+export {generateRandomNumber} from './random-number.js'
