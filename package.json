@@ -12,5 +12,12 @@
   ],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "scripts": {
+    "app:dev": "npm -w lib run build && npm -w app run dev",
+    "app:start": "npm -w lib run build && npm -w app run start"
+  },
+  "devDependencies": {
+    "chokidar": "^3.6.0"
+  }
 }

@@ -7,11 +7,12 @@
   "scripts": {
     "clean:build": "rimraf dist",
     "prebuild": "npm run clean:build",
+    "check:types": "tsc --noEmit",
     "build:types":"tsc --declaration --emitDeclarationOnly",
     "build": "npm run build:types && swc build src -d dist --strip-leading-paths --out-file-extension mjs",
-    "watch": "tsc -w",
-    "predev": "npm run build",
-    "dev": "node dist/index.mjs",
+    "predev": "npm run clean:build",
+    "dev": "swc -w index.js -d dist",
+    "prestart": "npm run build",
     "start": "node dist/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
