@@ -1,11 +1,11 @@
 {
-  "name": "@lib/node",
+  "name": "@test-ts-monorepo/common",
   "version": "1.0.0",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build":"tsc",
+    "watch":"tsc -w",
     "check:types": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
