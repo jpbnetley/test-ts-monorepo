@@ -20,9 +20,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@lib/web": "^1.0.0",
-    "@lib/common": "^1.0.0",
-    "@lib/node": "^1.0.0",
+    "@test-ts-monorepo/web": "^1.0.0",
+    "@test-ts-monorepo/common": "^1.0.0",
+    "@test-ts-monorepo/node": "^1.0.0",
     "typescript": "^5.5.4"
   },
   "devDependencies": {

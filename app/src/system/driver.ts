@@ -1,6 +1,6 @@
-import { generateRandomNumber } from "@lib/common"
-import { getOrigin as getWebOrigin} from "@lib/web"
-import { getOrigin as getNodeOrigin} from "@lib/node"
+import { generateRandomNumber } from "@test-ts-monorepo/common"
+import { getOrigin as getWebOrigin} from "@test-ts-monorepo/web"
+import { getOrigin as getNodeOrigin} from "@test-ts-monorepo/node"
 import { logRandomNumber } from "~/reader/index.js"
 
 export function start(): void {  
