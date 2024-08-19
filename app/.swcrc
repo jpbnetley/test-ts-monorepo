@@ -5,9 +5,9 @@
       "syntax": "typescript",
       "dynamicImport": true
     },
-    "target": "es2020",
+    "target": "esnext",
     "paths": {
-      "~":["dist/*"]
+      "~/*":["./src/*."]
     },
     "baseUrl": "."
   }
