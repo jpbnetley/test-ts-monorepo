@@ -8,26 +8,28 @@
     "clean:build": "rimraf dist",
     "prebuild": "npm run clean:build",
     "check:types": "tsc --noEmit",
-    "build:types":"tsc --declaration --emitDeclarationOnly",
-    "build": "npm run build:types && swc build src -d dist --strip-leading-paths --out-file-extension mjs",
+    "build:types": "tsc --declaration --emitDeclarationOnly",
+    "build": "npm run build:types && swc build src -d dist --strip-leading-paths -s --out-file-extension mjs",
     "predev": "npm run clean:build",
-    "dev": "swc -w index.js -d dist",
+    "dev": "swc -w src -d dist",
     "prestart": "npm run build",
     "start": "node dist/index.mjs",
+    "onlyStart":"node dist/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@test-ts-monorepo/web": "^1.0.0",
     "@test-ts-monorepo/common": "^1.0.0",
     "@test-ts-monorepo/node": "^1.0.0",
+    "@test-ts-monorepo/web": "^1.0.0",
     "typescript": "^5.5.4"
   },
   "devDependencies": {
     "@swc/cli": "^0.4.0",
-    "@swc/core": "^1.7.9",
+    "@swc/core": "^1.7.14",
+    "chokidar": "^3.6.0",
     "rimraf": "^6.0.1"
   }
 }

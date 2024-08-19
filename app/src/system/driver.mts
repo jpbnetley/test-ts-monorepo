@@ -1,7 +1,7 @@
 import { generateRandomNumber } from "@test-ts-monorepo/common"
 import { getOrigin as getWebOrigin} from "@test-ts-monorepo/web"
 import { getOrigin as getNodeOrigin} from "@test-ts-monorepo/node"
-import { logRandomNumber } from "~/reader/index.js"
+import { logRandomNumber } from "~/reader/index.mjs"
 
 export function start(): void {  
   console.log('start up')
