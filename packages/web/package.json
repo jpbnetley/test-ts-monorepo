@@ -4,7 +4,7 @@
   "main": "dist/index.mjs",
   "type": "module",
   "scripts": {
-    "build:types": "tsc",
+    "build:types": "tsc --emitDeclarationOnly",
     "prebuild": "npm run build:types",
     "build": "node ./esbuild.config.mjs",
     "watch": "node ./esbuild.watch.config.mjs",
