@@ -9,6 +9,7 @@
     "build": "node ./esbuild.config.mjs",
     "watch": "node ./esbuild.watch.config.mjs",
     "check:types": "tsc --noEmit",
+    "watch:check:types":"tsc --watch --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
