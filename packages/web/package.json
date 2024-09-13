@@ -4,8 +4,10 @@
   "main": "dist/index.mjs",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build:types": "tsc",
+    "prebuild": "npm run build:types",
+    "build": "node ./esbuild.config.mjs",
+    "watch": "node ./esbuild.watch.config.mjs",
     "check:types": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,5 +16,8 @@
   "description": "",
   "dependencies": {
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.1"
   }
 }
