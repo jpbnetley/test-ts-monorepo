@@ -5,7 +5,6 @@ async function runWatch() {
  const ctx = await context(config)
  await ctx.watch()
  console.log('Watching...');
-
 }
 
 runWatch()
