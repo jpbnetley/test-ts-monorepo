@@ -4,8 +4,9 @@
 export const config = {
   entryPoints: ['src/index.mts'],
   bundle: true,
-  platform: 'node',
+  platform: 'browser',
   target: "node18",
   outdir: "dist",
-  allowOverwrite: true
+  allowOverwrite: true,
+  sourcemap: 'linked'
 }
