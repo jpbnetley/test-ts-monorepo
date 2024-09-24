@@ -5,11 +5,11 @@ export const config = {
   entryPoints: ['src/**/*'],
   bundle: false,
   platform: 'browser',
-  target: "node18",
+  target: ["chrome58","firefox57","safari11","edge16"],
   outdir: "dist",
   allowOverwrite: true,
-  sourcemap: 'linked',
+  sourcemap: 'inline',
   outExtension: {
     '.js': '.mjs'
-  },
+  }
 }
