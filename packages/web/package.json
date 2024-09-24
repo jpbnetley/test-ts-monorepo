@@ -2,6 +2,7 @@
   "name": "@test-ts-monorepo/web",
   "version": "1.0.0",
   "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
   "type": "module",
   "scripts": {
     "build:types": "tsc --emitDeclarationOnly",

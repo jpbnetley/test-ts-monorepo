@@ -2,11 +2,14 @@
  * @type import('esbuild').BuildOptions
  */
 export const config = {
-  entryPoints: ['src/index.mts'],
-  bundle: true,
+  entryPoints: ['src/**/*'],
+  bundle: false,
   platform: 'browser',
   target: "node18",
   outdir: "dist",
   allowOverwrite: true,
-  sourcemap: 'linked'
+  sourcemap: 'linked',
+  outExtension: {
+    '.js': '.mjs'
+  },
 }
