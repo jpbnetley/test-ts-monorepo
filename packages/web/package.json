@@ -2,11 +2,15 @@
   "name": "@test-ts-monorepo/web",
   "version": "1.0.0",
   "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build:types": "tsc --emitDeclarationOnly",
+    "prebuild": "npm run build:types",
+    "build": "node ./esbuild.config.mjs",
+    "watch": "node ./esbuild.watch.config.mjs",
     "check:types": "tsc --noEmit",
+    "watch:check:types":"tsc --watch --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,5 +18,8 @@
   "description": "",
   "dependencies": {
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.1"
   }
 }
