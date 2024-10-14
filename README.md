@@ -29,5 +29,5 @@ npm run app:start
 ## Testing bundlers
 - swc: App
 - esbuild: packages/web
-- tsc: packages/node
+- webpack: packages/node
 - vite: packages/common

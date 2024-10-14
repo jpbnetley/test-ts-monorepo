@@ -2,11 +2,11 @@
   "name": "@test-ts-monorepo/node",
   "version": "1.0.0",
   "main": "dist/index.mjs",
-  "types": "dist/index.d.mts",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build": "webpack --mode=production --progress",
+    "watch": "webpack --mode=development --watch --progress",
     "check:types": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,8 @@
   "description": "",
   "dependencies": {
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "webpack": "^5.95.0"
   }
 }
