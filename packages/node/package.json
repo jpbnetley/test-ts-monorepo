@@ -5,8 +5,8 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "webpack --mode=production",
-    "watch": "webpack --mode=development --watch",
+    "build": "webpack --mode=production --progress",
+    "watch": "webpack --mode=development --watch --progress",
     "check:types": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
