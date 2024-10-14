@@ -25,3 +25,9 @@ npm run app:dev
 ```sh
 npm run app:start
 ```
+
+## Testing bundlers
+- swc: App
+- esbuild: packages/web
+- tsc: packages/node
+- vite: packages/common
