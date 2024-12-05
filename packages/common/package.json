@@ -14,11 +14,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "typescript": "^5.5.4",
-    "vite": "^5.4.9"
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11"
   },
   "devDependencies": {
     "vite-plugin-checker": "^0.8.0",
-    "vite-plugin-dts": "^4.2.4"
+    "vite-plugin-dts": "^4.3.0"
   }
 }
