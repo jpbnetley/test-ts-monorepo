@@ -14,10 +14,13 @@ export default defineConfig({
     port: 3000
   },
   build: { 
+    outDir: resolve(__dirname, 'dist'),
     lib: { 
-      entry: resolve(__dirname, 'src/index.mts'), 
+      entry: {
+        index: resolve(__dirname, 'src/index.mts'), 
+        web: resolve(__dirname, 'src/web/index.mts')
+      },
       formats: ['es'], 
-      fileName: 'index'
     },
     rollupOptions: {
       output: {
