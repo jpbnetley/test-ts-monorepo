@@ -6,7 +6,7 @@ import checker from 'vite-plugin-checker'
 export default defineConfig({
   resolve: { 
     alias: { 
-      src: resolve('src/') 
+      '~': resolve('./src') 
     } 
   },
   plugins: [dts(), checker({ typescript: true })],
@@ -17,8 +17,8 @@ export default defineConfig({
     outDir: resolve(__dirname, 'dist'),
     lib: { 
       entry: {
-        index: resolve(__dirname, 'src/index.mts'), 
-        web: resolve(__dirname, 'src/web/index.mts')
+        index: resolve(__dirname, 'src/index.ts'), 
+        web: resolve(__dirname, 'src/web/index.ts')
       },
       formats: ['es'], 
     },
