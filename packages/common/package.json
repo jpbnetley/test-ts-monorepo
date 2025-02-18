@@ -2,7 +2,7 @@
   "name": "@test-ts-monorepo/common",
   "version": "1.0.0",
   "main": "dist/index.mjs",
-  "types": "dist/index.d.mts",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "vite build",
@@ -24,11 +24,11 @@
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.mts"
+      "types": "./dist/index.d.ts"
     },
     "./web": {
       "import": "./dist/web.mjs",
-      "types": "./dist/web/index.d.mts"
+      "types": "./dist/web/index.d.ts"
     }
   }
 }
