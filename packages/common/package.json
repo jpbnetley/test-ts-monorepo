@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "vite-plugin-checker": "^0.8.0",
-    "vite-plugin-dts": "^4.5.1"
+    "vite-plugin-dts": "^4.5.3"
   },
   "exports": {
     ".": {
