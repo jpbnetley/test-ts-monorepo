@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=22"
   },
-  "packageManager": "npm@10.9.2+sha512.8ab88f10f224a0c614cb717a7f7c30499014f77134120e9c1f0211ea3cf3397592cbe483feb38e0c4b3be1c54e347292c76a1b5edb94a3289d5448484ab8ac81",
+  "packageManager": "npm@11.2.0+sha512.3dc9c50ba813a3d54393155a435fe66404b72685ab0e3008f9ae9ed8d81f6104860f07ed2656dd5748c1322d95f3140fa9b19c59a6bba7750fd12285f81866da",
   "type": "module",
   "workspaces": [
     "packages/*",
@@ -15,9 +15,10 @@
   "description": "",
   "scripts": {
     "app:dev": "npm -w packages run build && npm -w app run dev",
-    "app:start": "npm -w packages run build && npm -w app run start"
+    "app:start": "npm -w packages run build && npm -w app run start",
+    "clean":" npm -ws run clean:build"
   },
   "devDependencies": {
-    "chokidar": "^3.6.0"
+    "chokidar": "^4.0.3"
   }
 }
