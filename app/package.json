@@ -5,25 +5,21 @@
   "types": "./dist/index.d.mts",
   "type": "module",
   "scripts": {
-    "clean:build": "rimraf dist",
-    "prebuild": "npm run clean:build",
     "check:types": "tsc --noEmit",
     "build:types": "tsc --declaration --emitDeclarationOnly",
-    "build": "npm run build:types && swc build src -d dist --strip-leading-paths -s --out-file-extension mjs",
-    "predev": "npm run clean:build",
-    "dev": "swc -w src -d dist",
-    "prestart": "npm run build",
+    "build": "npm run build:types & swc build src -d dist --strip-leading-paths -s --out-file-extension mjs",
+    "dev": "swc -w src -d dist --strip-leading-paths -s --out-file-extension mjs",
     "start": "node dist/index.mjs",
-    "onlyStart": "node dist/index.mjs",
+    "dev:watch": "node --watch dist/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@test-ts-monorepo/common": "^1.0.0",
-    "@test-ts-monorepo/node": "^1.0.0",
-    "@test-ts-monorepo/web": "^1.0.0",
+    "@test-ts-monorepo/common": "workspace:*",
+    "@test-ts-monorepo/node": "workspace:*",
+    "@test-ts-monorepo/web": "workspace:*",
     "typescript": "^5.8.2"
   },
   "devDependencies": {
