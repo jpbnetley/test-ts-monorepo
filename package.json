@@ -23,6 +23,8 @@
     "app:dev:watch": "pnpm --filter app run dev:watch",
     "build": "pnpm --parallel -r run build",
     "packages:build": "pnpm --parallel --filter @test-ts-monorepo/* run build",
+    "packages:check:types": "pnpm --parallel --filter @test-ts-monorepo/* run check:types",
+    "app:check:types": "pnpm --filter app run check:types",
     "clean": "pnpm -r --parallel run clean:build"
   },
   "devDependencies": {
