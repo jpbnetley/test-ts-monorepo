@@ -1,9 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
-    "watch":{
-      "outputs": ["dist/**"]
-    },
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
@@ -13,16 +10,9 @@
       "outputs": ["dist/**"]
     },
     "dev": {
-      "dependsOn": ["@test-ts-monorepo/web#watch", "@test-ts-monorepo/node#watch", "@test-ts-monorepo/common#watch"],
-      "outputs": ["dist/**"],
-      "persistent": true,
-      "cache": false
-    },
-    "dev:watch":{
-      "dependsOn": ["@test-ts-monorepo/web#watch", "@test-ts-monorepo/node#watch", "@test-ts-monorepo/common#watch"],
-      "outputs": ["dist/**"],
+      "dependsOn": ["@test-ts-monorepo/web#build", "@test-ts-monorepo/node#build", "@test-ts-monorepo/common#build"],
       "persistent": true,
       "cache": false
     }
   }
-}
+} 

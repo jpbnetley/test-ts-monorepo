@@ -7,10 +7,11 @@
   "scripts": {
     "check:types": "tsc --noEmit",
     "build:types": "tsc --declaration --emitDeclarationOnly",
-    "build": "npm run build:types & swc build src -d dist --strip-leading-paths -s --out-file-extension mjs",
-    "dev": "swc -w src -d dist --strip-leading-paths -s --out-file-extension mjs",
-    "start": "node dist/index.mjs",
+    "build": "pnpm run build:types && swc build src -d dist --strip-leading-paths -s --out-file-extension mjs",
+    "dev": "concurrently \"pnpm:dev:build\" \"pnpm:dev:watch\"",
+    "dev:build":"swc -w src -d dist --strip-leading-paths -s --out-file-extension mjs",
     "dev:watch": "node --watch dist/index.mjs",
+    "start": "node dist/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -26,6 +27,7 @@
     "@swc/cli": "^0.6.0",
     "@swc/core": "^1.11.8",
     "chokidar": "^4.0.3",
+    "concurrently": "^9.1.2",
     "rimraf": "^6.0.1"
   }
 }

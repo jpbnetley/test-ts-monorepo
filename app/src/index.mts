@@ -1,4 +1,4 @@
 import {start} from './system/driver.mjs'
 
 start()
-console.log('app test2')
+console.log('app test')
