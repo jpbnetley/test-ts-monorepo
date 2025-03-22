@@ -21,18 +21,24 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Use Node.js ${{ env.node_version }} to enable corepack
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.node_version }}
+    - run: corepack enable
+
     - name: Use Node.js ${{ env.node_version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ env.node_version }}
-        cache: 'npm'
+        cache: 'pnpm'
 
     - name: Install
-      run: npm ci
+      run: pnpm install
 
     - name: Build lib
       if: ${{matrix.mono}} != packages
-      run: npm -w packages run build
+      run: pnpm packages:build
 
     - name: Check types
-      run: npm -w ${{ matrix.mono }} run check:types
+      run: pnpm run ${{matrix.mono}}:check:types
