@@ -17,6 +17,8 @@
     "turbo:build":"turbo run build",
     "turbo:start":"turbo run start",
     "turbo:dev":"turbo watch dev",
+    "turbo:app-cli:dev":"turbo watch dev --filter app-cli",
+    "turbo:app-react:dev":"turbo watch dev --filter app-react",
     "app:dev": "pnpm --parallel --filter @test-ts-monorepo/* run watch & pnpm --filter app run dev",
     "app:start": "pnpm --parallel --filter @test-ts-monorepo/* run build && pnpm --filter app run start",
     "app:onlyStart": "pnpm --filter app run onlyStart",
