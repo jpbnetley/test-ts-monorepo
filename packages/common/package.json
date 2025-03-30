@@ -16,10 +16,10 @@
   "description": "",
   "dependencies": {
     "typescript": "^5.8.2",
-    "vite": "^6.2.1"
+    "vite": "^6.2.3"
   },
   "devDependencies": {
-    "vite-plugin-checker": "^0.9.0",
+    "vite-plugin-checker": "^0.9.1",
     "vite-plugin-dts": "^4.5.3"
   },
   "exports": {
