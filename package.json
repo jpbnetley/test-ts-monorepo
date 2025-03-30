@@ -16,7 +16,7 @@
   "scripts": {
     "app:dev": "npm -w packages run build && npm -w app run dev",
     "app:start": "npm -w packages run build && npm -w app run start",
-    "clean":" npm -ws run clean:build"
+    "clean": " npm -ws run clean:build"
   },
   "devDependencies": {
     "chokidar": "^4.0.3"
