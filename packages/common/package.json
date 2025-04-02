@@ -16,7 +16,7 @@
   "description": "",
   "dependencies": {
     "typescript": "^5.8.2",
-    "vite": "^6.2.3"
+    "vite": "^6.2.4"
   },
   "devDependencies": {
     "vite-plugin-checker": "^0.9.1",
