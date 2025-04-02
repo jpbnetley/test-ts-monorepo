@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=22"
   },
-  "packageManager": "npm@11.2.0+sha512.3dc9c50ba813a3d54393155a435fe66404b72685ab0e3008f9ae9ed8d81f6104860f07ed2656dd5748c1322d95f3140fa9b19c59a6bba7750fd12285f81866da",
+  "packageManager": "pnpm@10.7.0+sha512.6b865ad4b62a1d9842b61d674a393903b871d9244954f652b8842c2b553c72176b278f64c463e52d40fff8aba385c235c8c9ecf5cc7de4fd78b8bb6d49633ab6",
   "type": "module",
   "workspaces": [
     "packages/*",
@@ -14,11 +14,23 @@
   "license": "ISC",
   "description": "",
   "scripts": {
-    "app:dev": "npm -w packages run build && npm -w app run dev",
-    "app:start": "npm -w packages run build && npm -w app run start",
-    "clean": " npm -ws run clean:build"
+    "turbo:build": "turbo run build",
+    "turbo:start": "turbo run start",
+    "turbo:dev": "turbo watch dev",
+    "turbo:app-cli:dev": "turbo watch dev --filter app-cli",
+    "turbo:app-react:dev": "turbo watch dev --filter app-react",
+    "app:dev": "pnpm --parallel --filter @test-ts-monorepo/* run watch & pnpm --filter app run dev",
+    "app:start": "pnpm --parallel --filter @test-ts-monorepo/* run build && pnpm --filter app run start",
+    "app:onlyStart": "pnpm --filter app run onlyStart",
+    "app:dev:watch": "pnpm --filter app run dev:watch",
+    "build": "pnpm --parallel -r run build",
+    "packages:build": "pnpm --parallel --filter @test-ts-monorepo/* run build",
+    "packages:check:types": "pnpm --parallel --filter @test-ts-monorepo/* run check:types",
+    "app:check:types": "pnpm --filter app run check:types",
+    "clean": "pnpm -r --parallel run clean:build"
   },
   "devDependencies": {
-    "chokidar": "^4.0.3"
+    "chokidar": "^4.0.3",
+    "turbo": "^2.4.4"
   }
 }
