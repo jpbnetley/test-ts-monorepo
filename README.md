@@ -11,19 +11,23 @@
 
 - Install packages: 
 ```sh
-npm i
+pnpm i
 ```
 
 ### Run dev mode
 - Start app 
 ```sh
-npm run app:dev
+pnpm run turbo:app-cli:dev
+```
+- Start react
+```sh
+pnpm run turbo:app-react:dev
 ```
 
 ### Run production mode
-- Start app 
+- Start all 
 ```sh
-npm run app:start
+pnpm run turbo:start
 ```
 
 ## Testing bundlers
