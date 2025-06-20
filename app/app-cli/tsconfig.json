@@ -1,5 +1,5 @@
 {
-  "extends":"../tsconfig.base.json",
+  "extends":"../../tsconfig.base.json",
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
@@ -110,8 +110,8 @@
   },
   "include": ["src"],
   "references": [
-    {"path": "../packages/common"},
-    {"path": "../packages/node"},
-    {"path": "../packages/web"},
+    {"path": "../../packages/common"},
+    {"path": "../../packages/node"},
+    {"path": "../../packages/web"},
 ]
 }
