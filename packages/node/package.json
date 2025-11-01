@@ -15,11 +15,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "ts-loader": "^9.5.2",
-    "webpack": "^5.99.9",
+    "ts-loader": "^9.5.4",
+    "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1"
   }
 }

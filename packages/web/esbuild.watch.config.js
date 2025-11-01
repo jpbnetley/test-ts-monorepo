@@ -1,5 +1,5 @@
 import { context } from 'esbuild'
-import { config } from './esbuild.shared.config.mjs'
+import { config } from './esbuild.shared.config.js'
 
 import { spawn } from'node:child_process';
 import readline from 'node:readline';
