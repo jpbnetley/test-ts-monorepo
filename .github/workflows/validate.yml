@@ -7,7 +7,7 @@ on:
     branches: ['main']
 
 env:
-  node_version: 22
+  node_version: 24
 
 jobs:
   Tests:
@@ -20,16 +20,16 @@ jobs:
         mono: [packages, app]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Use Node.js ${{ env.node_version }} to enable corepack
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v5
       with:
         node-version: ${{ env.node_version }}
     - run: corepack enable
 
     - name: Use Node.js ${{ env.node_version }}
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v5
       with:
         node-version: ${{ env.node_version }}
         cache: 'pnpm'
@@ -42,4 +42,4 @@ jobs:
       run: pnpm packages:build
 
     - name: Check types
-      run: pnpm run ${{matrix.mono}}:check:types
+      run: pnpm run ${{ matrix.mono }}:check:types
