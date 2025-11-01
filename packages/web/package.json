@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "build:types": "tsc --emitDeclarationOnly",
-    "prebuild": "npm run build:types",
-    "build": "node ./esbuild.config.mjs",
-    "watch": "node ./esbuild.watch.config.mjs",
+    "prebuild": "pnpm run build:types",
+    "build": "node ./esbuild.config.js",
+    "watch": "node ./esbuild.watch.config.js",
     "check:types": "tsc --noEmit",
     "watch:check:types": "tsc --watch --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,9 +18,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "esbuild": "^0.25.5"
+    "esbuild": "^0.25.11"
   }
 }
