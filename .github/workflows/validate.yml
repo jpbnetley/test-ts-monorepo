@@ -22,11 +22,8 @@ jobs:
     steps:
     - uses: actions/checkout@v5
 
-    - name: Use Node.js ${{ env.node_version }} to enable corepack
-      uses: actions/setup-node@v5
-      with:
-        node-version: ${{ env.node_version }}
-    - run: corepack enable
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
 
     - name: Use Node.js ${{ env.node_version }}
       uses: actions/setup-node@v5
