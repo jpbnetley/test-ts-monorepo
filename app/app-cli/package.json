@@ -27,7 +27,6 @@
     "@swc/cli": "^0.7.10",
     "@swc/core": "^1.15.10",
     "chokidar": "^4.0.3",
-    "concurrently": "^9.2.1",
-    "rimraf": "^6.1.2"
+    "concurrently": "^9.2.1"
   }
 }
