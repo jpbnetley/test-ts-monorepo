@@ -35,7 +35,7 @@ jobs:
       run: pnpm install
 
     - name: Build lib
-      if: ${{matrix.mono}} != packages
+      if: ${{ matrix.mono != 'packages'}} 
       run: pnpm packages:build
 
     - name: Check types
