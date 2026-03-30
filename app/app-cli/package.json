@@ -20,13 +20,14 @@
   "dependencies": {
     "@test-ts-monorepo/common": "workspace:*",
     "@test-ts-monorepo/node": "workspace:*",
-    "@test-ts-monorepo/web": "workspace:*",
-    "typescript": "^5.9.3"
+    "@test-ts-monorepo/web": "workspace:*"
   },
   "devDependencies": {
-    "@swc/cli": "^0.7.10",
-    "@swc/core": "^1.15.18",
-    "chokidar": "^4.0.3",
-    "concurrently": "^9.2.1"
+    "typescript": "^5.9.3",
+    "@swc/cli": "^0.8.0",
+    "@swc/core": "^1.15.21",
+    "chokidar": "^5.0.0",
+    "concurrently": "^9.2.1",
+    "rimraf": "^6.1.3"
   }
 }
