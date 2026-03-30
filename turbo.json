@@ -13,6 +13,12 @@
       "dependsOn": ["@test-ts-monorepo/web#build", "@test-ts-monorepo/node#build", "@test-ts-monorepo/common#build"],
       "persistent": true,
       "cache": false
+    },
+    "lint": {
+      "outputs": []
+    },
+    "fmt": {
+      "outputs": []
     }
   }
 } 
