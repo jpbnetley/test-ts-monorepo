@@ -2,11 +2,11 @@
   "name": "@test-ts-monorepo/node",
   "version": "1.0.0",
   "main": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "types": "dist/index.d.mts",
   "type": "module",
   "scripts": {
-    "build": "webpack --mode=production --progress",
-    "watch": "webpack --mode=development --watch --progress",
+    "build": "tsdown",
+    "watch": "tsdown --watch",
     "check:types": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean:build": "rimraf dist"
@@ -15,9 +15,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "ts-loader": "^9.5.7",
-    "typescript": "^5.9.3",
-    "webpack": "^5.106.1",
-    "webpack-cli": "^7.0.2"
+    "typescript": "^6.0.2",
+    "tsdown": "^0.21.7"
   }
 }
