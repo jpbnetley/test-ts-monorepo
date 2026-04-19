@@ -24,10 +24,10 @@
   },
   "devDependencies": {
     "@swc/cli": "^0.8.1",
-    "@swc/core": "^1.15.24",
+    "@swc/core": "^1.15.30",
     "chokidar": "^5.0.0",
     "concurrently": "^9.2.1",
     "rimraf": "^6.1.3",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   }
 }

@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite-plus';
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
 import checker from 'vite-plugin-checker'
