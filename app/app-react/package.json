@@ -4,13 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
-    "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check",
-    "preview": "vite preview"
+    "dev": "vp dev",
+    "build": "tsc -b && vp build",
+    "lint": "vp lint",
+    "lint:fix": "vp lint --fix",
+    "fmt": "vp fmt",
+    "fmt:check": "vp fmt --check",
+    "preview": "vp preview"
   },
   "dependencies": {
     "react": "^19.2.5",
@@ -20,9 +20,8 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^4.3.0",
-    "oxfmt": "^0.45.0",
-    "oxlint": "^1.60.0",
-    "typescript": "^6.0.2",
-    "vite": "^8.0.8"
+    "typescript": "^6.0.3",
+    "vite": "npm:@voidzero-dev/vite-plus-core@^0.1.18",
+    "vite-plus": "catalog:"
   }
 }

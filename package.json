@@ -34,7 +34,8 @@
   },
   "devDependencies": {
     "chokidar": "^5.0.0",
-    "turbo": "^2.9.6"
+    "turbo": "^2.9.6",
+    "vite-plus": "catalog:"
   },
   "dependencies": {
     "@types/node": "^24.12.2"
