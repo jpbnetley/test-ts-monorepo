@@ -1,3 +1,3 @@
-export function logRandomNumber(value: number){
-  console.log(value)
+export function logRandomNumber(value: number) {
+  console.log(value);
 }

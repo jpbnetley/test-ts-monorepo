@@ -1,27 +1,15 @@
 {
   "name": "test-ts-monorepo",
   "version": "1.0.0",
-  "engines": {
-    "node": ">=24"
-  },
-  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319",
-  "type": "module",
+  "description": "",
+  "license": "ISC",
+  "author": "",
   "workspaces": [
     "packages/*",
     "app/*"
   ],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "type": "module",
   "scripts": {
-    "turbo:check:types": "turbo run check:types",
-    "turbo:lint": "turbo run lint",
-    "turbo:fmt": "turbo run fmt",
-    "turbo:build": "turbo run build",
-    "turbo:start": "turbo run start",
-    "turbo:dev": "turbo watch dev",
-    "turbo:app-cli:dev": "turbo watch dev --filter app-cli",
-    "turbo:app-react:dev": "turbo watch dev --filter app-react",
     "app:dev": "pnpm --parallel --filter @test-ts-monorepo/* run watch & pnpm --filter app run dev",
     "app:start": "pnpm --parallel --filter @test-ts-monorepo/* run build && pnpm --filter app run start",
     "app:onlyStart": "pnpm --filter app run onlyStart",
@@ -33,11 +21,12 @@
     "clean": "pnpm -r --parallel run clean:build"
   },
   "devDependencies": {
+    "@types/node": "24",
     "chokidar": "^5.0.0",
-    "turbo": "^2.9.6",
     "vite-plus": "catalog:"
   },
-  "dependencies": {
-    "@types/node": "^24.12.2"
-  }
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@10.33.2+sha512.a90faf6feeab71ad6c6e57f94e0fe1a12f5dcc22cd754db40ae9593eb6a3e0b6b12e3540218bb37ae083404b1f2ce6db2a4121e979829b4aff94b99f49da1cf8"
 }

@@ -2,35 +2,45 @@
 
 ## The goal is to test the following
 
-- [X] when running main app, should automatically compile lib repos
+- [x] when running main app, should automatically compile lib repos
 - [ ] should share an eslint config from parent repo
 - [ ] share test config from parent repo
-- [X] share tsconfig from parent repo
+- [x] share tsconfig from parent repo
 
 ## Running the project
 
-- Install packages: 
+- install vite plus:
+  [instructions](https://viteplus.dev/guide/#getting-started)
+- Install packages:
+
 ```sh
-pnpm i
+vp i
 ```
 
 ### Run dev mode
-- Start app 
+
+- Start app
+
 ```sh
-pnpm run turbo:app-cli:dev
+vp run vp:app-cli:dev
 ```
+
 - Start react
+
 ```sh
-pnpm run turbo:app-react:dev
+vp run vp:app-react:dev
 ```
 
 ### Run production mode
-- Start all 
+
+- Start all
+
 ```sh
-pnpm run turbo:start
+vp run vp:start
 ```
 
 ## Testing bundlers
+
 - swc: App
 - esbuild: packages/web
 - webpack: packages/node

@@ -1,9 +1,12 @@
 {
   "name": "app-cli",
   "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
   "main": "dist/index.mjs",
   "types": "./dist/index.d.mts",
-  "type": "module",
   "scripts": {
     "check:types": "tsc --noEmit",
     "build:types": "tsc --declaration --emitDeclarationOnly",
@@ -14,9 +17,6 @@
     "start": "node dist/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "@test-ts-monorepo/common": "workspace:*",
     "@test-ts-monorepo/node": "workspace:*",

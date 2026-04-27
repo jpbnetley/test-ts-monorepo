@@ -1,3 +1,3 @@
-export function getOrigin(){
-  return 'from node lib'
+export function getOrigin() {
+  return 'from node lib';
 }

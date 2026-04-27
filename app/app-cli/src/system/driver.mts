@@ -1,28 +1,27 @@
-import { generateRandomNumber } from "@test-ts-monorepo/common"
-import { getInfo, getOrigin as getWebOrigin } from "@test-ts-monorepo/web"
-import { getOrigin as getNodeOrigin} from "@test-ts-monorepo/node"
-import { logRandomNumber } from "~/reader/index.mjs"
-import { webLogger } from "@test-ts-monorepo/common/web"
+import { generateRandomNumber } from '@test-ts-monorepo/common';
+import { getInfo, getOrigin as getWebOrigin } from '@test-ts-monorepo/web';
+import { getOrigin as getNodeOrigin } from '@test-ts-monorepo/node';
+import { logRandomNumber } from '~/reader/index.mjs';
+import { webLogger } from '@test-ts-monorepo/common/web';
 
-export function start(): void {  
-  console.log('start up')
+export function start(): void {
+  console.log('start up');
   getInfo();
-  const randomNumber = generateRandomNumber()
+  const randomNumber = generateRandomNumber();
 
-  logRandomNumber(randomNumber)
+  logRandomNumber(randomNumber);
 
-  const libs = getLibs()
-  console.log(libs)
+  const libs = getLibs();
+  console.log(libs);
 
-  console.log('finish')
-
+  console.log('finish');
 }
 
-export function getLibs(): string{
-  const web = getWebOrigin()
-  const node = getNodeOrigin()
+export function getLibs(): string {
+  const web = getWebOrigin();
+  const node = getNodeOrigin();
 
-  return `got answers from: ${web}; ${node}`
+  return `got answers from: ${web}; ${node}`;
 }
 
-webLogger('web logger')
+webLogger('web logger');

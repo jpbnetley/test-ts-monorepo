@@ -1,3 +1,3 @@
 export function webLogger(data: unknown) {
-  console.log(data)
+  console.log(data);
 }
