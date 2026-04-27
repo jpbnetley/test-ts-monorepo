@@ -1,1 +1,1 @@
-export * from '~/web/web-logger'
+export * from '~/web/web-logger';

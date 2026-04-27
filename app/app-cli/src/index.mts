@@ -1,4 +1,4 @@
-import {start} from './system/driver.mjs'
+import { start } from './system/driver.mjs';
 
-start()
-console.log('app test')
+start();
+console.log('app test');

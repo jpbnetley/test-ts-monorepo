@@ -1,9 +1,12 @@
 {
   "name": "@test-ts-monorepo/web",
   "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
   "main": "dist/index.mjs",
   "types": "dist/index.d.mts",
-  "type": "module",
   "scripts": {
     "build:types": "tsc --emitDeclarationOnly",
     "prebuild": "pnpm run build:types",
@@ -14,9 +17,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean:build": "rimraf dist"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "esbuild": "^0.28.0",
     "typescript": "^6.0.3"

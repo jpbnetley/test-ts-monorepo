@@ -1,9 +1,12 @@
 {
   "name": "@test-ts-monorepo/node",
   "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
   "main": "dist/index.mjs",
   "types": "dist/index.d.mts",
-  "type": "module",
   "scripts": {
     "build": "vp pack",
     "watch": "vp pack --watch",
@@ -11,9 +14,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean:build": "rimraf dist"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "typescript": "^6.0.3",
     "vite-plus": "catalog:"

@@ -1,3 +1,3 @@
-export function getOrigin(){
-  return 'from web lib'
+export function getOrigin() {
+  return 'from web lib';
 }

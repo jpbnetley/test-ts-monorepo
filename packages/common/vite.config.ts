@@ -1,33 +1,33 @@
 import { defineConfig } from 'vite-plus';
-import { resolve } from 'path'
-import dts from 'vite-plugin-dts'
-import checker from 'vite-plugin-checker'
+import { resolve } from 'path';
+import dts from 'vite-plugin-dts';
+import checker from 'vite-plugin-checker';
 
 export default defineConfig({
-  resolve: { 
-    alias: { 
-      '~': resolve('./src') 
-    } 
+  resolve: {
+    alias: {
+      '~': resolve('./src')
+    }
   },
   plugins: [dts(), checker({ typescript: true })],
   server: {
     port: 3000
   },
-  build: { 
+  build: {
     outDir: resolve(__dirname, 'dist'),
-    lib: { 
+    lib: {
       entry: {
-        index: resolve(__dirname, 'src/index.ts'), 
+        index: resolve(__dirname, 'src/index.ts'),
         web: resolve(__dirname, 'src/web/index.ts')
       },
-      formats: ['es'], 
+      formats: ['es']
     },
     rollupOptions: {
       output: {
         entryFileNames: `[name].mjs`,
         chunkFileNames: `[name].[hash].mjs`,
         assetFileNames: `[name].[hash].[ext]`
-      },
-    },
-  },
+      }
+    }
+  }
 });

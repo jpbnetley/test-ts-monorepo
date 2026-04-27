@@ -15,28 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     permissions: {}
 
-    strategy:
-      matrix:
-        mono: [packages, app]
-
     steps:
-    - uses: actions/checkout@v6
+      - uses: actions/checkout@v6
+      - uses: voidzero-dev/setup-vp@v1
+        with:
+          node-version: ${{ env.node_version }}
 
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v5
+      - name: Build lib
+        run: vp run vp:build:packages
 
-    - name: Use Node.js ${{ env.node_version }}
-      uses: actions/setup-node@v6
-      with:
-        node-version: ${{ env.node_version }}
-        cache: 'pnpm'
-
-    - name: Install
-      run: pnpm install
-
-    - name: Build lib
-      if: ${{ matrix.mono != 'packages'}} 
-      run: pnpm packages:build
-
-    - name: Check types
-      run: pnpm run ${{ matrix.mono }}:check:types
+      - name: Check
+        run: vp check

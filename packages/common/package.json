@@ -1,26 +1,12 @@
 {
   "name": "@test-ts-monorepo/common",
   "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
   "main": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "type": "module",
-  "scripts": {
-    "build": "vp build",
-    "watch": "vp build --watch",
-    "check:types": "tsc --noEmit",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean:build": "rimraf dist"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "typescript": "^6.0.3",
-    "vite": "npm:@voidzero-dev/vite-plus-core@^0.1.18",
-    "vite-plugin-checker": "^0.13.0",
-    "vite-plugin-dts": "^4.5.4",
-    "vite-plus": "catalog:"
-  },
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -30,5 +16,19 @@
       "import": "./dist/web.mjs",
       "types": "./dist/web/index.d.ts"
     }
+  },
+  "scripts": {
+    "build": "vp build",
+    "watch": "vp build --watch",
+    "check:types": "tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:build": "rimraf dist"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vite": "npm:@voidzero-dev/vite-plus-core@^0.1.18",
+    "vite-plugin-checker": "^0.13.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plus": "catalog:"
   }
 }
