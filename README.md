@@ -3,8 +3,6 @@
 ## The goal is to test the following
 
 - [x] when running main app, should automatically compile lib repos
-- [ ] should share an eslint config from parent repo
-- [ ] share test config from parent repo
 - [x] share tsconfig from parent repo
 
 ## Running the project
