@@ -3,11 +3,8 @@ packages:
   - app/*
 catalog:
   vite: npm:@voidzero-dev/vite-plus-core@latest
-  vite-plus: ^0.1.19
+  vite-plus: ^0.1.23
   vitest: npm:@voidzero-dev/vite-plus-test@latest
-onlyBuiltDependencies:
-  - '@swc/core'
-  - esbuild
 overrides:
   vite: 'catalog:'
   vitest: 'catalog:'
@@ -18,3 +15,6 @@ peerDependencyRules:
   allowedVersions:
     vite: '*'
     vitest: '*'
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
